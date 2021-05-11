@@ -1,2 +1,2 @@
 # azmm
-Hosting for AZMM.org.
+Hosting for [AZMM.org](https://azmm.org).
