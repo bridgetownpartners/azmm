@@ -295,7 +295,13 @@
     margin-bottom: 20px;
   }
 }
-
+.contact-emereti-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto 220px;
+  width: 90%;
+}
 .contact-emereti-wrapper .contactus-section,.emeriti-section {
   flex: 1;
 }
