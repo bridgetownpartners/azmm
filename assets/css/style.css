@@ -18,7 +18,7 @@
   padding: 0 40px;
   width: 100%;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .header__wrapper {
     padding: 0 10px;
   }
@@ -31,7 +31,7 @@
   height: 100%;
   width: 100%;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .header__wrapper .logo-wrapper img {
     width: 80%;
   }
@@ -57,7 +57,7 @@
   justify-content: center;
   width: 60%;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .banner-sec__wrapper .banner-container {
     width: 100%;
   }
@@ -69,7 +69,7 @@
   font-size: clamp(5vh, 112px, 20vw);
   font-weight: bold;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .banner-sec__wrapper .banner-container .banner-title {
     font-size: 56px;
   }
@@ -80,7 +80,7 @@
   margin: 30px 0;
   text-align: center;
 }
-@media only screen and (max-width: 720px) and (min-width: 320px) {
+@media only screen and (max-width: 720px) and (min-width: 480px) {
   .banner-sec__wrapper .banner-container .banner__sub-title {
     font-size: 16px;
     margin-bottom: 20px;
@@ -110,7 +110,7 @@
   height: 74px;
   justify-content: center;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .acent__wrapper {
     font-size: 12px;
     height: 60px;
@@ -126,7 +126,7 @@
   padding-top: 70px;
   width: 90%;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .organizers-section .organizers-container {
     padding-top: 40px;
   }
@@ -146,7 +146,7 @@
   min-height: 300px;
   margin-bottom: 50px;
 }
-@media only screen and (max-width: 1024px) and (min-width: 320px) {
+@media only screen and (max-width: 1024px) and (min-width: 480px) {
   .organizers-section .card__wrapper .card {
     margin-bottom: 0;
   }
@@ -194,7 +194,7 @@
   margin-bottom: 70px;
   width: 100%;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .azmm__organizer-title {
     font-size: 32px;
   }
@@ -213,7 +213,7 @@
   padding-top: 35px;
   min-height: 500px;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .emeriti-section .emeriti-container {
     min-height: 420px;
     padding-top: 35px;
@@ -246,7 +246,7 @@
 .emeriti-section .emeriti-content__wrapper .emeriti-list__wrapper .emeriti__link a {
   color: #CE5C17;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .emeriti-section .emeriti-content__wrapper .emeriti-list__wrapper {
     align-items: center;
     justify-content: center;
@@ -283,7 +283,7 @@
   color: white;
   text-decoration: none;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
   .azmm-footer .footer-content__wrapper {
     align-items: center;
     font-size: 16px;
@@ -316,7 +316,7 @@
     margin-right: 80px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .contact-emereti-wrapper {
     flex-direction: column;
     margin: 0 auto;
@@ -325,5 +325,3 @@
     margin-right: 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
