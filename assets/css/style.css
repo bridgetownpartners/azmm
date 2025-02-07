@@ -103,6 +103,7 @@
 
 .acent__wrapper {
   align-items: center;
+  align: center;
   color: #fff;
   background-color: #CE5C17;
   display: flex;
