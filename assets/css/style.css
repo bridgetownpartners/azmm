@@ -45,7 +45,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  height: 80vh;
+  min-height: 80vh; /* RTH changed this from height, per Grok on 5/2/2025. */
   justify-content: center;
 }
 .banner-sec__wrapper .banner-container {
@@ -53,7 +53,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  min-height: 80vh; /* RTH changed this from height, per Grok on 5/2/2025. */
   justify-content: center;
   width: 60%;
 }
