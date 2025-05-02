@@ -33,7 +33,7 @@
 }
 @media only screen and (max-width: 480px) {
   .header__wrapper .logo-wrapper img {
-    width: 80%;
+    width: 95%;  /* modifed by RTH */
   }
 }
 
@@ -56,7 +56,7 @@
   flex-direction: column;
   min-height: 80vh; /* Changed from height, per Grok on 5/2/2025 */
   justify-content: center;
-  width: 60%;
+  width: 80%; /* modifed by RTH */
   overflow: auto; /* Added to contain iframe */
 }
 @media only screen and (max-width: 480px) {
