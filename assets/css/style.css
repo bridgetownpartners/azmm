@@ -25,7 +25,6 @@ body {
   color: var(--ink);
   background: var(--white);
   line-height: 1.5;
-  padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
 }
 
 img {
@@ -49,21 +48,15 @@ a:hover {
 }
 
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
+  position: relative;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: calc(var(--header-height) + env(safe-area-inset-top, 0px));
-  padding: calc(0.6rem + env(safe-area-inset-top, 0px)) 6vw 0.6rem;
+  min-height: var(--header-height);
+  padding: 0.6rem 6vw;
   background: #000;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 .logo-link img {
@@ -198,10 +191,20 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.hero-lede {
+.hero-lede,
+.section-lede {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
   max-width: 640px;
   margin: 0 auto 1.6rem;
+}
+
+.hero-lede {
+  margin: 0 auto 1.6rem;
+}
+
+.section-lede {
+  text-align: center;
+  color: var(--ink);
 }
 
 .btn {
