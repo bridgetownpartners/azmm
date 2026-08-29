@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--ink);
   background: var(--white);
   line-height: 1.5;
@@ -33,6 +33,17 @@ img {
 
 a {
   color: var(--orange);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.brand {
+  font-family: "American Typewriter", "Courier New", Courier, monospace;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .site-header {
@@ -53,6 +64,36 @@ a {
   width: auto;
 }
 
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +109,7 @@ a {
 
 .site-nav a:hover {
   color: var(--orange-soft);
+  text-decoration: none;
 }
 
 .hero {
@@ -124,8 +166,7 @@ a {
 
 .hero-overlay {
   z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.72) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.72) 100%);
 }
 
 .hero-content {
@@ -171,6 +212,7 @@ a {
 
 .btn-primary:hover {
   background: #b44d12;
+  text-decoration: none;
 }
 
 .meeting-chip {
@@ -184,17 +226,15 @@ a {
   padding: 4.5rem 0;
 }
 
+.enroll-inner {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 h2 {
   text-align: center;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 0.75rem;
-}
-
-.section-intro {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2rem;
-  color: var(--muted);
 }
 
 .enroll-section {
@@ -205,12 +245,15 @@ h2 {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .form-container iframe {
+  display: block;
   width: 100%;
-  height: 600px;
-  max-height: 80vh;
+  height: 980px;
+  border: 0;
+  overflow: hidden;
   background: #fff;
   border-radius: 12px;
 }
@@ -278,52 +321,32 @@ h2 {
 }
 
 .site-footer {
-  background: #000;
-  color: #fff;
-  padding: 2.4rem 6vw;
+  background: #0a0a0a;
+  color: #ccc;
+  text-align: center;
+  padding: 2.5rem 1.25rem;
+  font-size: 0.95rem;
 }
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
-.partner-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+.site-footer p {
+  margin: 0.4rem 0;
+  color: #ccc;
 }
 
-.partner {
-  text-decoration: none;
+.site-footer a {
   color: #fff;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 0.7rem 0.95rem;
-  min-width: 170px;
+  text-decoration: none;
 }
 
-.partner-mark {
-  display: block;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-.partner-mark.roiclear {
-  color: #7cffb2;
-}
-
-.partner-mark.ray {
-  color: #ffb068;
-}
-
-.partner-url {
-  display: block;
-  font-size: 0.85rem;
-  color: #cfcfcf;
+.site-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 @keyframes fadeLayer {
@@ -338,10 +361,29 @@ h2 {
 }
 
 @media (max-width: 720px) {
-  .site-header {
+  .hamburger {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #000;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0.75rem 5vw 0.9rem;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    border-top: 1px solid #222;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.85rem 6vw;
   }
 
   .collage-layer {
@@ -355,9 +397,7 @@ h2 {
   }
 
   .form-container iframe {
-    height: auto;
-    min-height: 450px;
-    max-height: 90vh;
+    height: 1180px;
   }
 }
 

@@ -21,7 +21,12 @@
     <a href="./index.html" class="logo-link">
       <img src="./assets/img/AZMM-logo-bold-600.png" alt="AZMM.org" />
     </a>
-    <nav class="site-nav" aria-label="Primary">
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
       <a href="#enroll">Enroll</a>
       <a href="#organizers">Organizers</a>
       <a href="#past-organizers">Past Organizers</a>
@@ -53,18 +58,15 @@
       <h1>Learn together.<br>Invest in Arizona.</h1>
       <p class="hero-lede">AZMM.org is where Arizona-focused multifamily investors share resources and learn from each other.</p>
       <a class="btn btn-primary" href="#enroll">Enroll here</a>
-      <p class="meeting-chip">Meets Fridays at 6:55am Phoenix time (no DST)</p>
+      <p class="meeting-chip">Fridays at 6:55am Phoenix time (no DST)</p>
     </div>
   </section>
 
   <section id="enroll" class="enroll-section">
-    <div class="section-inner">
-      <h2>Enroll here</h2>
-      <p class="section-intro">Do you own (or aspire to own) multifamily properties in Arizona? Join the group with the form below.</p>
+    <div class="section-inner enroll-inner">
       <div class="form-container">
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/PqbfKdaZY6prqRUocV3z"
-          style="width:100%;border:none;border-radius:3px"
           id="inline-PqbfKdaZY6prqRUocV3z"
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
@@ -74,11 +76,11 @@
           data-deactivation-type="neverDeactivate"
           data-deactivation-value=""
           data-form-name="AZMM.org Join the Group"
-          data-height="600"
+          data-height="980"
           data-layout-iframe-id="inline-PqbfKdaZY6prqRUocV3z"
           data-form-id="PqbfKdaZY6prqRUocV3z"
           title="AZMM.org Join the Group"
-          scrolling="yes"
+          scrolling="no"
         ></iframe>
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
       </div>
@@ -144,18 +146,33 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p class="copyright">Copyright © 2026, All Rights Reserved.</p>
-      <div class="partner-links">
-        <a class="partner" href="https://ROIClear.com" aria-label="ROIClear.com">
-          <span class="partner-mark roiclear">ROIClear</span>
-          <span class="partner-url">ROIClear.com</span>
-        </a>
-        <a class="partner" href="https://rayhightower.com/" aria-label="RayHightower.com">
-          <span class="partner-mark ray">RayHightower</span>
-          <span class="partner-url">RayHightower.com</span>
-        </a>
-      </div>
+      <p class="copyright"><span class="brand">AZMM.org</span> © 2026, All Rights Reserved.</p>
+      <p class="footer-note">
+        Tech + Business Blog: <a href="https://RayHightower.com">RayHightower.com</a><br>
+        <a href="https://ROIClear.com"><span class="brand">ROI Clear</span></a> is written without spaces: <a href="https://ROIClear.com"><span class="brand">ROIClear</span></a>
+      </p>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('site-nav');
+
+    hamburger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hamburger.classList.toggle('active', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  </script>
 </body>
 </html>
