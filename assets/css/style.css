@@ -7,6 +7,7 @@
   --muted: #6b6560;
   --line: #e6e0d8;
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --header-height: 76px;
 }
 
 *, *::before, *::after {
@@ -24,6 +25,7 @@ body {
   color: var(--ink);
   background: var(--white);
   line-height: 1.5;
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
 }
 
 img {
@@ -47,16 +49,21 @@ a:hover {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 20;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 76px;
-  padding: 0.6rem 6vw;
+  min-height: calc(var(--header-height) + env(safe-area-inset-top, 0px));
+  padding: calc(0.6rem + env(safe-area-inset-top, 0px)) 6vw 0.6rem;
   background: #000;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .logo-link img {
@@ -368,7 +375,7 @@ h2 {
   .site-nav {
     display: none;
     position: absolute;
-    top: 76px;
+    top: 100%;
     left: 0;
     right: 0;
     background: #000;
