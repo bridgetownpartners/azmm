@@ -307,6 +307,12 @@ h2 {
   margin-bottom: 0.25rem;
 }
 
+.card-book {
+  margin: 0.35rem 0 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
 .past-section {
   background: #fafafa;
 }
